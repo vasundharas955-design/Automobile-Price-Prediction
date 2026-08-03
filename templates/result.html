@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet"
+ href="{{ url_for('static',
+ filename='result.css')}}">
+</head>
+<body>
+    <h1>Automobile Price Prediction</h1>
+    <div class="container">
+        <h2>Prediction Result</h2>
+        <h3>Estimated Car Price</h3>
+        <strong>Rs {{ price }}</strong>
+        <hr>
+        <h3>Entered Details</h3>
+
+        <p><strong>Make:</strong> {{ make }}</p>
+        <p><strong>Fuel Type:</strong> {{ fuel }}</p>
+        <p><strong>Body Style:</strong> {{ body }}</p>
+        <p><strong>Engine Size:</strong> {{ engine_size }}</p>
+        <br>
+        <a href="/predict" class="btn">Predict Another Car</a>
+        <a href="/" class="btn">Go to Home</a>
+     </div>
+</body>
+</html>

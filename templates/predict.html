@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Car Price</title>
+    <link rel="stylesheet"
+ href="{{ url_for('static',
+ filename='predict.css')}}">
+</head>
+<body>
+    <h1>Automobile Price Prediction</h1>
+<div class="container">
+    <h2>Enter Car Details</h2>
+    <form action="/predict_price" method="POST">
+
+        <label> Car Make</label><br>
+        <select name="make">
+            <option>Select Car Brand</option>
+        <option>Toyota</option>
+        <option>Honda</option>
+        <option>BMW</option>
+        <option>Audi</option>
+        </select>
+        <br><br>
+
+        <label>Fuel Type</label><br>
+        <select name="fuel_type">
+            <option>Select Fuel Type</option>
+        <option value="gas">Gas</option>
+        <option value="diesel">Diesel</option>
+        </select>
+        <br><br>
+
+        <label>Body Style</label><br>
+        <select name="body_style">
+            <option>Select Body Style</option>
+        <option value="sedan">Sedan</option>
+        <option value="hatchback">Hatchback</option>
+        <option value="convertible">Convertible</option>
+        <option value="wagon">Wagon</option>
+        <option value="hardtop">Hardtop</option>
+        </select>
+        <br><br>
+
+        <label>Engine Size</label><br>
+        <input type="number"
+        name="engine_size" placeholder="Enter Engine Size">
+        <br><br>
+
+        <button type="submit">Predict Price</button>
+        <button type="reset">Reset</button>
+        
+    </form>
+    </div>
+</body>
+</html>
